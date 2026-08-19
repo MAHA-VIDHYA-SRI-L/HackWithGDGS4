@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 120" role="img" aria-labelledby="title desc">
+  <title id="title">Google Developer Groups KSRCE logo</title>
+  <desc id="desc">A stylized GDG and KSRCE logo with Google-inspired colors.</desc>
+  <rect width="420" height="120" fill="transparent"/>
+  <g transform="translate(10 12)">
+    <g transform="translate(0 0)">
+      <path d="M42 18c-14 0-26 11-26 25v4c0 14 12 25 26 25h13c7 0 12 5 12 12v2c0 7-5 12-12 12H14c-6 0-10 4-10 10v2c0 6 4 10 10 10h41c22 0 40-18 40-40v-7c0-22-18-40-40-40H42z" fill="#4285F4" opacity="0.12"/>
+      <path d="M55 11c-28 0-50 22-50 50s22 50 50 50 50-22 50-50-22-50-50-50zm0 20c16 0 30 13 30 30s-14 30-30 30-30-13-30-30 14-30 30-30z" fill="#1F1F1F" opacity="0.08"/>
+      <circle cx="44" cy="38" r="16" fill="#4285F4"/>
+      <circle cx="74" cy="30" r="14" fill="#EA4335"/>
+      <circle cx="76" cy="58" r="16" fill="#FBBC04"/>
+      <circle cx="46" cy="68" r="14" fill="#34A853"/>
+      <path d="M58 38h24c8 0 14 6 14 14v1c0 8-6 14-14 14H58c-8 0-14-6-14-14v-1c0-8 6-14 14-14z" fill="#ffffff" opacity="0.96"/>
+      <path d="M58 42h24c6 0 10 4 10 10v1c0 6-4 10-10 10H58c-6 0-10-4-10-10v-1c0-6 4-10 10-10zm-9 1l-5 5 5 5 5-5-5-5zm43-1l5 5-5 5-5-5 5-5zm-18 4h5v10h-5zm-11 0h5v10h-5zm15 0h5v10h-5z" fill="#1F1F1F" opacity="0.9"/>
+    </g>
+    <g transform="translate(120 18)">
+      <text x="0" y="38" fill="#1A1A1A" font-size="28" font-family="Arial, Helvetica, sans-serif" font-weight="700" letter-spacing="0.5">GDG</text>
+      <text x="0" y="70" fill="#1A1A1A" font-size="20" font-family="Arial, Helvetica, sans-serif" font-weight="700" letter-spacing="2">KSRCE</text>
+      <rect x="0" y="80" width="130" height="4" rx="2" fill="#4285F4"/>
+      <rect x="32" y="80" width="130" height="4" rx="2" fill="#EA4335"/>
+      <rect x="66" y="80" width="130" height="4" rx="2" fill="#FBBC04"/>
+      <rect x="100" y="80" width="130" height="4" rx="2" fill="#34A853"/>
+    </g>
+  </g>
+</svg>
