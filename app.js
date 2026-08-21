@@ -56,4 +56,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const revealObserver = new IntersectionObserver((entries) => entries.forEach((entry) => { if (entry.isIntersecting) { entry.target.classList.add('visible'); revealObserver.unobserve(entry.target); } }), { threshold: 0.12 });
   document.querySelectorAll('.reveal').forEach((element) => revealObserver.observe(element));
+
+  const hero = document.querySelector('.hero');
+  const heroArt = document.querySelector('.hero-art');
+  if (hero && heroArt && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    hero.addEventListener('pointermove', (event) => {
+      const bounds = hero.getBoundingClientRect();
+      const x = ((event.clientX - bounds.left) / bounds.width - 0.5) * 10;
+      const y = ((event.clientY - bounds.top) / bounds.height - 0.5) * 8;
+      heroArt.style.setProperty('--parallax-x', `${x}px`);
+      heroArt.style.setProperty('--parallax-y', `${y}px`);
+    });
+    hero.addEventListener('pointerleave', () => {
+      heroArt.style.setProperty('--parallax-x', '0px');
+      heroArt.style.setProperty('--parallax-y', '0px');
+    });
+  }
 });
