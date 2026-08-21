@@ -7,6 +7,12 @@ export const S4_CONFIG = {
   ideationDeadline: 'September 28, 2026',
   contactEmail: 'gdg@ksrce.ac.in',
   registrationState: 'coming soon',
+  timeline: [
+    { date: 'SEPTEMBER 28, 2026', title: 'IDEATION SUBMISSION DEADLINE' },
+    { date: 'OCTOBER 8, 2026', title: '36-HOUR HACKATHON BEGINS' },
+    { date: 'OCTOBER 9, 2026', title: 'BUILD • MENTOR • COLLABORATE' },
+    { date: 'OCTOBER 10, 2026', title: 'FINAL DEMO • JUDGING • CLOSING' },
+  ],
   devfolioUrl: null,
 };
 
@@ -78,6 +84,31 @@ document.addEventListener('DOMContentLoaded', () => {
     const journeyObserver = new IntersectionObserver((entries) => entries.forEach((entry) => { if (entry.isIntersecting) progression.forEach((item, index) => window.setTimeout(() => item.classList.add('active'), index * 180)); }), { threshold: 0.3 });
     journeyObserver.observe(journey);
   }
+  const timeline = document.querySelector('.timeline');
+  const timelineItems = [...document.querySelectorAll('.timeline-item')];
+  S4_CONFIG.timeline.forEach((milestone, index) => {
+    const item = timelineItems[index];
+    if (!item) return;
+    const date = item.querySelector('time');
+    const title = item.querySelector('h3');
+    if (date) date.textContent = milestone.date;
+    if (title) title.textContent = milestone.title;
+  });
+  const timelineFill = document.querySelector('.timeline-track span');
+  if (timeline && timelineItems.length && timelineFill) {
+    const updateTimeline = () => {
+      const bounds = timeline.getBoundingClientRect();
+      const progress = Math.min(1, Math.max(0, (window.innerHeight * 0.72 - bounds.top) / bounds.height));
+      timelineFill.style.height = `${progress * 100}%`;
+      timelineItems.forEach((item, index) => {
+        const itemProgress = (index + 0.5) / timelineItems.length;
+        item.classList.toggle('revealed', progress >= itemProgress);
+      });
+    };
+    window.addEventListener('scroll', updateTimeline, { passive: true });
+    updateTimeline();
+  }
+
   const hero = document.querySelector('.hero');
   const heroArt = document.querySelector('.hero-art');
   if (hero && heroArt && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
