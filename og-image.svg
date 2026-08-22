@@ -1,31 +1,83 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
-  <rect width="1200" height="630" fill="#f5f3ee"/>
-  <!-- grid lines -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#F5F3EE"/>
+  
+  <!-- Subtle Architectural Grid Pattern -->
   <defs>
-    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
-      <path d="M 80 0 L 0 0 0 80" fill="none" stroke="#e0ddd6" stroke-width="1"/>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#E4E0D7" stroke-width="1"/>
     </pattern>
+    <linearGradient id="glow" x1="600" y1="0" x2="600" y2="630" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#34A853" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#F5F3EE" stop-opacity="0"/>
+    </linearGradient>
   </defs>
-  <rect width="1200" height="630" fill="url(#grid)" opacity="0.5"/>
-  <!-- top bar -->
-  <rect width="1200" height="60" fill="#0A0A0A"/>
-  <!-- GDG dots -->
-  <circle cx="40" cy="30" r="7" fill="#4285F4"/>
-  <circle cx="56" cy="30" r="7" fill="#EA4335"/>
-  <circle cx="72" cy="30" r="7" fill="#FBBC05"/>
-  <circle cx="88" cy="30" r="7" fill="#34A853"/>
-  <text x="104" y="35" font-family="monospace" font-size="13" fill="#f5f3ee" letter-spacing="2">GDG ON CAMPUS KSRCE</text>
-  <!-- main headline -->
-  <text x="80" y="240" font-family="sans-serif" font-weight="700" font-size="110" fill="#0A0A0A" letter-spacing="-6">HACK WITH</text>
-  <text x="80" y="360" font-family="sans-serif" font-weight="700" font-size="110" fill="#4285F4" letter-spacing="-6">GDG</text>
-  <text x="310" y="360" font-family="sans-serif" font-weight="700" font-size="110" fill="#EA4335" letter-spacing="-6"> S4</text>
-  <!-- sub line -->
-  <line x1="80" y1="400" x2="1120" y2="400" stroke="#e0ddd6" stroke-width="1"/>
-  <text x="80" y="440" font-family="monospace" font-size="18" fill="#888580" letter-spacing="3">OCTOBER 8–10, 2026</text>
-  <text x="80" y="468" font-family="monospace" font-size="18" fill="#888580" letter-spacing="3">KSR COLLEGE OF ENGINEERING, NAMAKKAL</text>
-  <!-- accent bar bottom -->
-  <rect x="0" y="610" width="300" height="4" fill="#4285F4"/>
-  <rect x="300" y="610" width="300" height="4" fill="#EA4335"/>
-  <rect x="600" y="610" width="300" height="4" fill="#FBBC05"/>
-  <rect x="900" y="610" width="300" height="4" fill="#34A853"/>
+  
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  
+  <!-- Outer Border Frame -->
+  <rect x="30" y="30" width="1140" height="570" fill="none" stroke="#D5D0C5" stroke-width="1.5"/>
+  <polyline points="20,50 20,20 50,20" stroke="#0A0A0A" stroke-width="2" fill="none"/>
+  <polyline points="1150,20 1180,20 1180,50" stroke="#0A0A0A" stroke-width="2" fill="none"/>
+  <polyline points="20,580 20,610 50,610" stroke="#0A0A0A" stroke-width="2" fill="none"/>
+  <polyline points="1150,610 1180,610 1180,580" stroke="#0A0A0A" stroke-width="2" fill="none"/>
+
+  <!-- Top Header Bar -->
+  <rect x="30" y="30" width="1140" height="70" fill="#0A0A0A"/>
+  
+  <!-- GDG 4-Color Dots -->
+  <circle cx="70" cy="65" r="7" fill="#4285F4"/>
+  <circle cx="90" cy="65" r="7" fill="#EA4335"/>
+  <circle cx="110" cy="65" r="7" fill="#FBBC05"/>
+  <circle cx="130" cy="65" r="7" fill="#34A853"/>
+  
+  <text x="155" y="70" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#F5F3EE" letter-spacing="3">GDG ON CAMPUS · KSR COLLEGE OF ENGINEERING</text>
+  <text x="1130" y="70" text-anchor="end" font-family="monospace" font-size="13" fill="#34A853" letter-spacing="2">11°23′N 78°00′E</text>
+
+  <!-- Category Eyebrow Tag -->
+  <rect x="70" y="140" width="230" height="34" rx="4" fill="#0A0A0A"/>
+  <text x="85" y="162" font-family="monospace" font-size="13" font-weight="700" fill="#34A853" letter-spacing="2">36-HOUR HACKATHON</text>
+
+  <rect x="315" y="140" width="180" height="34" rx="4" fill="#E8E4DB" stroke="#D5D0C5" stroke-width="1"/>
+  <text x="330" y="162" font-family="monospace" font-size="13" font-weight="700" fill="#55524E" letter-spacing="2">OPEN INNOVATION</text>
+
+  <!-- Big Hero Typography -->
+  <text x="70" y="275" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="94" font-weight="900" fill="#0A0A0A" letter-spacing="-3">HACK WITH</text>
+  
+  <!-- GDG S4 Multi-Color Brand Text -->
+  <text x="70" y="385" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="108" font-weight="900" letter-spacing="-3">
+    <tspan fill="#4285F4">G</tspan><tspan fill="#EA4335">D</tspan><tspan fill="#FBBC05">G</tspan><tspan fill="#0A0A0A"> </tspan><tspan fill="#34A853">S4</tspan>
+  </text>
+
+  <!-- Divider Line -->
+  <line x1="70" y1="430" x2="1130" y2="430" stroke="#D5D0C5" stroke-width="1.5"/>
+
+  <!-- Event Details Strip -->
+  <!-- Date Block -->
+  <g transform="translate(70, 465)">
+    <text x="0" y="0" font-family="monospace" font-size="12" fill="#76736E" letter-spacing="2">DATES</text>
+    <text x="0" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="22" font-weight="800" fill="#0A0A0A" letter-spacing="0.5">OCTOBER 8–10, 2026</text>
+    <text x="0" y="52" font-family="monospace" font-size="13" fill="#EA4335" letter-spacing="1">ROUND 1 IDEATION: SEPT 28</text>
+  </g>
+
+  <!-- Venue Block -->
+  <g transform="translate(480, 465)">
+    <text x="0" y="0" font-family="monospace" font-size="12" fill="#76736E" letter-spacing="2">VENUE</text>
+    <text x="0" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="22" font-weight="800" fill="#0A0A0A" letter-spacing="0.5">KSR COLLEGE OF ENGINEERING</text>
+    <text x="0" y="52" font-family="monospace" font-size="13" fill="#76736E" letter-spacing="1">NAMAKKAL, TAMIL NADU · OFFLINE</text>
+  </g>
+
+  <!-- Format Block -->
+  <g transform="translate(940, 465)">
+    <text x="0" y="0" font-family="monospace" font-size="12" fill="#76736E" letter-spacing="2">TEAM SIZE</text>
+    <text x="0" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="22" font-weight="800" fill="#0A0A0A" letter-spacing="0.5">1–4 BUILDERS</text>
+    <text x="0" y="52" font-family="monospace" font-size="13" fill="#34A853" letter-spacing="1">APPLY ON DEVFOLIO</text>
+  </g>
+
+  <!-- 4-Color Bottom Google Accent Strip -->
+  <rect x="30" y="594" width="285" height="6" fill="#4285F4"/>
+  <rect x="315" y="594" width="285" height="6" fill="#EA4335"/>
+  <rect x="600" y="594" width="285" height="6" fill="#FBBC05"/>
+  <rect x="885" y="594" width="285" height="6" fill="#34A853"/>
 </svg>
