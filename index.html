@@ -86,23 +86,18 @@
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
   <div class="page-grid" aria-hidden="true"></div>
-  <aside class="announcement" aria-label="Event announcement">
-    <span class="live-dot" aria-hidden="true"></span>
-    <span>Season 4 is taking shape.</span>
-    <a href="#register">Get notified <span aria-hidden="true">↗</span></a>
-  </aside>
   <header class="site-header" id="navbar">
     <a class="brand" href="#main-content" aria-label="Hack with GDG S4 — home">
-      <img class="brand-logo" src="gdg-ksrce-logo.svg" alt="GDG On Campus KSRCE" width="108" height="36" />
+      <img class="brand-logo" src="gdg-ksrce-logo.svg" alt="GDG On Campus KSRCE" width="120" height="40" />
     </a>
     <nav class="desktop-nav" aria-label="Primary navigation">
-      <a href="#about"    data-section="about">About</a>
-      <a href="#details"  data-section="details">Hackathon</a>
-      <a href="#timeline" data-section="timeline">Timeline</a>
-      <a href="#prizes"   data-section="prizes">Prizes</a>
-      <a href="#faq"      data-section="faq">FAQ</a>
+      <a href="#about"       data-section="about">About</a>
+      <a href="#innovation"  data-section="innovation">Tracks</a>
+      <a href="#timeline"    data-section="timeline">Timeline</a>
+      <a href="#organizers"  data-section="organizers">Team</a>
+      <a href="#register"    data-section="register">Contact</a>
+      <a href="#faq"         data-section="faq">FAQ</a>
     </nav>
-    <a class="button button-dark header-cta" href="#devfolio" data-devfolio-cta>Apply with Devfolio <span aria-hidden="true">↗</span></a>
     <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false" aria-controls="mobileNav">
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
@@ -110,12 +105,12 @@
   </header>
   <div class="mobile-nav" id="mobileNav" aria-hidden="true" inert>
     <nav aria-label="Mobile navigation">
-      <a href="#about"    data-section="about">About</a>
-      <a href="#details"  data-section="details">Hackathon</a>
-      <a href="#timeline" data-section="timeline">Timeline</a>
-      <a href="#prizes"   data-section="prizes">Prizes</a>
-      <a href="#faq"      data-section="faq">FAQ</a>
-      <a class="mobile-apply" href="#devfolio" data-devfolio-cta>Apply with Devfolio <span aria-hidden="true">↗</span></a>
+      <a href="#about"       data-section="about">About</a>
+      <a href="#innovation"  data-section="innovation">Tracks</a>
+      <a href="#timeline"    data-section="timeline">Timeline</a>
+      <a href="#organizers"  data-section="organizers">Team</a>
+      <a href="#register"    data-section="register">Contact</a>
+      <a href="#faq"         data-section="faq">FAQ</a>
     </nav>
   </div>
   <div class="nav-toast" id="navToast" role="status" aria-live="polite" aria-atomic="true"></div>
@@ -124,253 +119,353 @@
     <section class="hero" id="hero" aria-labelledby="hero-heading">
 
       <!-- ═══════════════════════════════════════════════════
-           LIVING DIGITAL WORLD — 5-layer animated environment
+           LIVING GREEN DIGITAL FOREST — S4 NATURE HERO SCENE
            ═══════════════════════════════════════════════════ -->
       <div class="hero-world" aria-hidden="true" id="heroWorld">
 
-        <!-- LAYER 0: sky / ambient glow -->
+        <!-- LAYER 0: Sky / Ambient Glow -->
         <div class="hw-sky"></div>
 
-        <!-- LAYER 1: far background terrain (very slow, 60s) -->
-        <div class="hw-scroll-wrap hw-scroll-far">
-          <svg class="hw-terrain-svg" viewBox="0 0 2880 320" preserveAspectRatio="none" fill="none">
-            <path d="M0,240 C240,180 480,260 720,200 C960,140 1200,220 1440,170 C1680,120 1920,200 2160,150 C2400,100 2640,180 2880,160 L2880,320 L0,320 Z" fill="#34A853" opacity="0.18"/>
-            <path d="M0,260 C360,200 720,280 1080,230 C1440,180 1800,250 2160,210 C2520,170 2700,230 2880,220 L2880,320 L0,320 Z" fill="#34A853" opacity="0.12"/>
-          </svg>
-          <svg class="hw-terrain-svg" viewBox="0 0 2880 320" preserveAspectRatio="none" fill="none">
-            <path d="M0,240 C240,180 480,260 720,200 C960,140 1200,220 1440,170 C1680,120 1920,200 2160,150 C2400,100 2640,180 2880,160 L2880,320 L0,320 Z" fill="#34A853" opacity="0.18"/>
-            <path d="M0,260 C360,200 720,280 1080,230 C1440,180 1800,250 2160,210 C2520,170 2700,230 2880,220 L2880,320 L0,320 Z" fill="#34A853" opacity="0.12"/>
-          </svg>
-        </div>
-
-        <!-- LAYER 2: mid terrain (35s, opposite direction) -->
-        <div class="hw-scroll-wrap hw-scroll-mid">
-          <svg class="hw-terrain-svg" viewBox="0 0 2880 280" preserveAspectRatio="none" fill="none">
-            <path d="M0,200 C200,130 400,210 600,155 C800,100 1000,190 1200,135 C1400,80 1600,170 1800,120 C2000,70 2200,160 2400,110 C2600,60 2740,140 2880,120 L2880,280 L0,280 Z" fill="#34A853" opacity="0.28"/>
-          </svg>
-          <svg class="hw-terrain-svg" viewBox="0 0 2880 280" preserveAspectRatio="none" fill="none">
-            <path d="M0,200 C200,130 400,210 600,155 C800,100 1000,190 1200,135 C1400,80 1600,170 1800,120 C2000,70 2200,160 2400,110 C2600,60 2740,140 2880,120 L2880,280 L0,280 Z" fill="#34A853" opacity="0.28"/>
-          </svg>
-        </div>
-
-        <!-- LAYER 3: foreground terrain with black outline (22s) -->
-        <div class="hw-scroll-wrap hw-scroll-fore">
-          <svg class="hw-terrain-svg" viewBox="0 0 2880 240" preserveAspectRatio="none" fill="none">
-            <path d="M0,160 C160,90 320,170 480,110 C640,50 800,150 960,90 C1120,30 1280,130 1440,80 C1600,30 1760,120 1920,70 C2080,20 2240,110 2400,65 C2560,20 2720,100 2880,70 L2880,240 L0,240 Z" fill="#34A853" stroke="#0a0a0a" stroke-width="2.5"/>
-          </svg>
-          <svg class="hw-terrain-svg" viewBox="0 0 2880 240" preserveAspectRatio="none" fill="none">
-            <path d="M0,160 C160,90 320,170 480,110 C640,50 800,150 960,90 C1120,30 1280,130 1440,80 C1600,30 1760,120 1920,70 C2080,20 2240,110 2400,65 C2560,20 2720,100 2880,70 L2880,240 L0,240 Z" fill="#34A853" stroke="#0a0a0a" stroke-width="2.5"/>
+        <!-- LAYER 1: Hanging Top Canopy Vines (Framing corners like reference image) -->
+        <div class="hw-canopy hw-canopy-left">
+          <svg viewBox="0 0 360 260" fill="none" preserveAspectRatio="none">
+            <!-- Main branch vine -->
+            <path d="M-20, -20 Q120,40 180,120 Q220,180 240,240" stroke="#1E4D2B" stroke-width="8" stroke-linecap="round"/>
+            <path d="M60,10 Q140,80 160,160" stroke="#1E4D2B" stroke-width="5" stroke-linecap="round"/>
+            <path d="M120,40 Q220,90 290,140" stroke="#1E4D2B" stroke-width="5" stroke-linecap="round"/>
+            <!-- Big lush leaves (layered tones) -->
+            <path d="M-10,10 C30,20 60,70 40,110 C20,90 0,60 -10,10Z" fill="#1E8E3E" stroke="#0a0a0a" stroke-width="2"/>
+            <path d="M40,30 C90,30 130,80 100,130 C70,110 50,70 40,30Z" fill="#2D9E4A" stroke="#0a0a0a" stroke-width="2"/>
+            <path d="M90,60 C150,50 190,110 160,160 C120,140 100,100 90,60Z" fill="#34A853" stroke="#0a0a0a" stroke-width="2"/>
+            <path d="M140,90 C200,80 250,140 220,190 C180,170 150,130 140,90Z" fill="#47C769" stroke="#0a0a0a" stroke-width="2"/>
+            <path d="M180,140 C240,130 280,190 260,240 C220,220 190,180 180,140Z" fill="#34A853" stroke="#0a0a0a" stroke-width="2"/>
+            <!-- Leaf details -->
+            <path d="M20,60 C70,90 90,150 70,180 C40,160 30,110 20,60Z" fill="#2D9E4A" stroke="#0a0a0a" stroke-width="2"/>
+            <path d="M70,100 C130,120 150,180 120,220 C90,190 80,140 70,100Z" fill="#1E8E3E" stroke="#0a0a0a" stroke-width="2"/>
+            <path d="M130,150 C190,170 210,230 180,260 C150,230 140,190 130,150Z" fill="#2D9E4A" stroke="#0a0a0a" stroke-width="2"/>
+            <path d="M210,80 C270,90 310,140 290,180 C250,160 230,120 210,80Z" fill="#47C769" stroke="#0a0a0a" stroke-width="2"/>
+            <path d="M260,110 C320,120 350,170 330,210 C290,190 270,150 260,110Z" fill="#34A853" stroke="#0a0a0a" stroke-width="2"/>
           </svg>
         </div>
 
-        <!-- LAYER 4: abstract cloud/shape drifters -->
+        <div class="hw-canopy hw-canopy-right">
+          <svg viewBox="0 0 360 260" fill="none" preserveAspectRatio="none">
+            <!-- Main branch vine -->
+            <path d="M380,-20 Q240,40 180,120 Q140,180 120,240" stroke="#1E4D2B" stroke-width="8" stroke-linecap="round"/>
+            <path d="M300,10 Q220,80 200,160" stroke="#1E4D2B" stroke-width="5" stroke-linecap="round"/>
+            <path d="M240,40 Q140,90 70,140" stroke="#1E4D2B" stroke-width="5" stroke-linecap="round"/>
+            <!-- Big lush leaves -->
+            <path d="M370,10 C330,20 300,70 320,110 C340,90 360,60 370,10Z" fill="#1E8E3E" stroke="#0a0a0a" stroke-width="2"/>
+            <path d="M320,30 C270,30 230,80 260,130 C290,110 310,70 320,30Z" fill="#2D9E4A" stroke="#0a0a0a" stroke-width="2"/>
+            <path d="M270,60 C210,50 170,110 200,160 C240,140 260,100 270,60Z" fill="#34A853" stroke="#0a0a0a" stroke-width="2"/>
+            <path d="M220,90 C160,80 110,140 140,190 C180,170 210,130 220,90Z" fill="#47C769" stroke="#0a0a0a" stroke-width="2"/>
+            <path d="M180,140 C120,130 80,190 100,240 C140,220 170,180 180,140Z" fill="#34A853" stroke="#0a0a0a" stroke-width="2"/>
+            <path d="M340,60 C290,90 270,150 290,180 C320,160 330,110 340,60Z" fill="#2D9E4A" stroke="#0a0a0a" stroke-width="2"/>
+            <path d="M290,100 C230,120 210,180 240,220 C270,190 280,140 290,100Z" fill="#1E8E3E" stroke="#0a0a0a" stroke-width="2"/>
+            <path d="M230,150 C170,170 150,230 180,260 C210,230 220,190 230,150Z" fill="#2D9E4A" stroke="#0a0a0a" stroke-width="2"/>
+            <path d="M150,80 C90,90 50,140 70,180 C110,160 130,120 150,80Z" fill="#47C769" stroke="#0a0a0a" stroke-width="2"/>
+            <path d="M100,110 C40,120 10,170 30,210 C70,190 90,150 100,110Z" fill="#34A853" stroke="#0a0a0a" stroke-width="2"/>
+          </svg>
+        </div>
+
+        <!-- LAYER 2: Drifting Cartoon Clouds -->
         <div class="hw-clouds">
           <div class="hw-cloud hw-cloud-1">
-            <svg viewBox="0 0 120 48" fill="none"><ellipse cx="60" cy="28" rx="52" ry="18" fill="white" stroke="#0a0a0a" stroke-width="2"/><ellipse cx="38" cy="24" rx="28" ry="16" fill="white" stroke="#0a0a0a" stroke-width="2"/><ellipse cx="82" cy="26" rx="22" ry="14" fill="white" stroke="#0a0a0a" stroke-width="2"/></svg>
+            <svg viewBox="0 0 160 64" fill="none"><ellipse cx="80" cy="38" rx="72" ry="24" fill="white" stroke="#0a0a0a" stroke-width="2.5"/><ellipse cx="50" cy="30" rx="36" ry="22" fill="white" stroke="#0a0a0a" stroke-width="2.5"/><ellipse cx="110" cy="32" rx="30" ry="18" fill="white" stroke="#0a0a0a" stroke-width="2.5"/><ellipse cx="80" cy="42" rx="60" ry="16" fill="#E6F4EA"/></svg>
           </div>
           <div class="hw-cloud hw-cloud-2">
-            <svg viewBox="0 0 96 40" fill="none"><ellipse cx="48" cy="24" rx="42" ry="14" fill="white" stroke="#0a0a0a" stroke-width="2"/><ellipse cx="30" cy="20" rx="22" ry="13" fill="white" stroke="#0a0a0a" stroke-width="2"/><ellipse cx="66" cy="22" rx="18" ry="11" fill="white" stroke="#0a0a0a" stroke-width="2"/></svg>
+            <svg viewBox="0 0 130 54" fill="none"><ellipse cx="65" cy="32" rx="58" ry="19" fill="white" stroke="#0a0a0a" stroke-width="2.5"/><ellipse cx="42" cy="26" rx="28" ry="17" fill="white" stroke="#0a0a0a" stroke-width="2.5"/><ellipse cx="90" cy="28" rx="24" ry="15" fill="white" stroke="#0a0a0a" stroke-width="2.5"/><ellipse cx="65" cy="36" rx="46" ry="12" fill="#E6F4EA"/></svg>
           </div>
           <div class="hw-cloud hw-cloud-3">
-            <svg viewBox="0 0 80 34" fill="none"><ellipse cx="40" cy="20" rx="34" ry="12" fill="rgba(52,168,83,0.12)" stroke="#34A853" stroke-width="1.5"/><ellipse cx="24" cy="17" rx="18" ry="10" fill="rgba(52,168,83,0.12)" stroke="#34A853" stroke-width="1.5"/></svg>
+            <svg viewBox="0 0 110 46" fill="none"><ellipse cx="55" cy="28" rx="48" ry="16" fill="white" stroke="#0a0a0a" stroke-width="2"/><ellipse cx="36" cy="22" rx="24" ry="14" fill="white" stroke="#0a0a0a" stroke-width="2"/><ellipse cx="76" cy="24" rx="20" ry="12" fill="white" stroke="#0a0a0a" stroke-width="2"/></svg>
           </div>
         </div>
 
-        <!-- LAYER 5: Trees along bottom edges -->
-        <div class="hw-trees" aria-hidden="true">
-          <!-- Left tree cluster -->
-          <div class="hw-tree hw-tree-1">
-            <svg viewBox="0 0 80 160" fill="none"><rect x="34" y="110" width="12" height="50" fill="#1e8e3e" stroke="#0a0a0a" stroke-width="1.5"/><polygon points="40,10 70,80 10,80" fill="#34A853" stroke="#0a0a0a" stroke-width="2"/><polygon points="40,35 65,95 15,95" fill="#2d9e4a" stroke="#0a0a0a" stroke-width="2"/><polygon points="40,60 60,110 20,110" fill="#34A853" stroke="#0a0a0a" stroke-width="2"/></svg>
+        <!-- LAYER 3: 3-Layer Rolling Green Hills (100% Seamless Infinite Flow — Pure Top Waves) -->
+        <div class="hw-hills">
+          <!-- Distant Pale Mountains -->
+          <div class="hw-scroll-wrap hw-scroll-far">
+            <svg class="hw-terrain-svg" viewBox="0 0 2880 340" preserveAspectRatio="none" fill="none">
+              <path d="M0,180 C240,120 480,240 720,180 C960,120 1200,240 1440,180 C1680,120 1920,240 2160,180 C2400,120 2640,240 2880,180 L2880,340 L0,340 Z" fill="#A8DBB4" opacity="0.6"/>
+              <path d="M0,200 C360,140 720,260 1080,200 C1440,140 1800,260 2160,200 C2520,140 2700,220 2880,200 L2880,340 L0,340 Z" fill="#93D4A3" opacity="0.5"/>
+            </svg>
+            <svg class="hw-terrain-svg" viewBox="0 0 2880 340" preserveAspectRatio="none" fill="none">
+              <path d="M0,180 C240,120 480,240 720,180 C960,120 1200,240 1440,180 C1680,120 1920,240 2160,180 C2400,120 2640,240 2880,180 L2880,340 L0,340 Z" fill="#A8DBB4" opacity="0.6"/>
+              <path d="M0,200 C360,140 720,260 1080,200 C1440,140 1800,260 2160,200 C2520,140 2700,220 2880,200 L2880,340 L0,340 Z" fill="#93D4A3" opacity="0.5"/>
+            </svg>
           </div>
-          <div class="hw-tree hw-tree-2">
-            <svg viewBox="0 0 60 130" fill="none"><rect x="24" y="90" width="10" height="40" fill="#1e8e3e" stroke="#0a0a0a" stroke-width="1.5"/><polygon points="29,8 54,65 4,65" fill="#2d9e4a" stroke="#0a0a0a" stroke-width="2"/><polygon points="29,32 50,80 8,80" fill="#34A853" stroke="#0a0a0a" stroke-width="2"/><polygon points="29,55 48,95 10,95" fill="#3db85a" stroke="#0a0a0a" stroke-width="2"/></svg>
+
+          <!-- Midground Rolling Forest Hills (Solid fill + Top crest curve ONLY) -->
+          <div class="hw-scroll-wrap hw-scroll-mid">
+            <svg class="hw-terrain-svg" viewBox="0 0 2880 300" preserveAspectRatio="none" fill="none">
+              <path d="M0,140 C240,70 480,210 720,140 C960,70 1200,210 1440,140 C1680,70 1920,210 2160,140 C2400,70 2640,210 2880,140 L2880,300 L0,300 Z" fill="#58C274"/>
+              <path d="M0,140 C240,70 480,210 720,140 C960,70 1200,210 1440,140 C1680,70 1920,210 2160,140 C2400,70 2640,210 2880,140" stroke="#0a0a0a" stroke-width="2.5" stroke-linecap="square"/>
+            </svg>
+            <svg class="hw-terrain-svg" viewBox="0 0 2880 300" preserveAspectRatio="none" fill="none">
+              <path d="M0,140 C240,70 480,210 720,140 C960,70 1200,210 1440,140 C1680,70 1920,210 2160,140 C2400,70 2640,210 2880,140 L2880,300 L0,300 Z" fill="#58C274"/>
+              <path d="M0,140 C240,70 480,210 720,140 C960,70 1200,210 1440,140 C1680,70 1920,210 2160,140 C2400,70 2640,210 2880,140" stroke="#0a0a0a" stroke-width="2.5" stroke-linecap="square"/>
+            </svg>
           </div>
-          <div class="hw-tree hw-tree-3">
-            <svg viewBox="0 0 50 110" fill="none"><rect x="20" y="76" width="9" height="34" fill="#1e8e3e" stroke="#0a0a0a" stroke-width="1.5"/><polygon points="24,6 46,55 2,55" fill="#34A853" stroke="#0a0a0a" stroke-width="2"/><polygon points="24,28 44,70 4,70" fill="#2d9e4a" stroke="#0a0a0a" stroke-width="2"/><polygon points="24,50 42,82 6,82" fill="#3db85a" stroke="#0a0a0a" stroke-width="2"/></svg>
-          </div>
-          <!-- Right tree cluster -->
-          <div class="hw-tree hw-tree-4">
-            <svg viewBox="0 0 80 160" fill="none"><rect x="34" y="110" width="12" height="50" fill="#1e8e3e" stroke="#0a0a0a" stroke-width="1.5"/><polygon points="40,10 70,80 10,80" fill="#2d9e4a" stroke="#0a0a0a" stroke-width="2"/><polygon points="40,35 65,95 15,95" fill="#34A853" stroke="#0a0a0a" stroke-width="2"/><polygon points="40,60 60,110 20,110" fill="#3db85a" stroke="#0a0a0a" stroke-width="2"/></svg>
-          </div>
-          <div class="hw-tree hw-tree-5">
-            <svg viewBox="0 0 60 130" fill="none"><rect x="24" y="90" width="10" height="40" fill="#1e8e3e" stroke="#0a0a0a" stroke-width="1.5"/><polygon points="29,8 54,65 4,65" fill="#34A853" stroke="#0a0a0a" stroke-width="2"/><polygon points="29,32 50,80 8,80" fill="#2d9e4a" stroke="#0a0a0a" stroke-width="2"/><polygon points="29,55 48,95 10,95" fill="#34A853" stroke="#0a0a0a" stroke-width="2"/></svg>
-          </div>
-          <div class="hw-tree hw-tree-6">
-            <svg viewBox="0 0 50 110" fill="none"><rect x="20" y="76" width="9" height="34" fill="#1e8e3e" stroke="#0a0a0a" stroke-width="1.5"/><polygon points="24,6 46,55 2,55" fill="#3db85a" stroke="#0a0a0a" stroke-width="2"/><polygon points="24,28 44,70 4,70" fill="#34A853" stroke="#0a0a0a" stroke-width="2"/><polygon points="24,50 42,82 6,82" fill="#2d9e4a" stroke="#0a0a0a" stroke-width="2"/></svg>
+
+          <!-- Foreground Meadow Crest (Solid fill + Top crest curve ONLY) -->
+          <div class="hw-scroll-wrap hw-scroll-fore">
+            <svg class="hw-terrain-svg" viewBox="0 0 2880 250" preserveAspectRatio="none" fill="none">
+              <path d="M0,90 C240,20 480,160 720,90 C960,20 1200,160 1440,90 C1680,20 1920,160 2160,90 C2400,20 2640,160 2880,90 L2880,250 L0,250 Z" fill="#34A853"/>
+              <path d="M0,90 C240,20 480,160 720,90 C960,20 1200,160 1440,90 C1680,20 1920,160 2160,90 C2400,20 2640,160 2880,90" stroke="#0a0a0a" stroke-width="3" stroke-linecap="square"/>
+            </svg>
+            <svg class="hw-terrain-svg" viewBox="0 0 2880 250" preserveAspectRatio="none" fill="none">
+              <path d="M0,90 C240,20 480,160 720,90 C960,20 1200,160 1440,90 C1680,20 1920,160 2160,90 C2400,20 2640,160 2880,90 L2880,250 L0,250 Z" fill="#34A853"/>
+              <path d="M0,90 C240,20 480,160 720,90 C960,20 1200,160 1440,90 C1680,20 1920,160 2160,90 C2400,20 2640,160 2880,90" stroke="#0a0a0a" stroke-width="3" stroke-linecap="square"/>
+            </svg>
           </div>
         </div>
 
-        <!-- LAYER 6: Falling leaves -->
+        <!-- LAYER 4: Asymmetrical Lush Forest Trees (Organic Natural Depths) -->
+        <div class="hw-forest-trees" aria-hidden="true">
+          <!-- Left Forest Tree (Majestic Grand Oak) -->
+          <div class="hw-forest-tree hw-tree-left">
+            <svg viewBox="0 0 280 400" fill="none">
+              <!-- Trunk (Stationary, Firmly Rooted) -->
+              <g class="hw-tree-trunk">
+                <path d="M120,400 L125,230 Q120,180 95,150 Q135,180 140,230 L155,400 Z" fill="#6E4327" stroke="#0a0a0a" stroke-width="3"/>
+                <path d="M140,240 Q165,195 200,170 Q165,200 148,245 Z" fill="#6E4327" stroke="#0a0a0a" stroke-width="2.5"/>
+                <path d="M115,250 Q85,205 50,190 Q85,210 108,255 Z" fill="#6E4327" stroke="#0a0a0a" stroke-width="2.5"/>
+                <path d="M108,400 Q138,380 168,400" stroke="#0a0a0a" stroke-width="3"/>
+              </g>
+              <!-- Layered Foliage Clouds -->
+              <g class="hw-tree-crown hw-crown-left">
+                <circle cx="135" cy="95"  r="72" fill="#1E8E3E" stroke="#0a0a0a" stroke-width="3"/>
+                <circle cx="75"  cy="140" r="62" fill="#2D9E4A" stroke="#0a0a0a" stroke-width="3"/>
+                <circle cx="195" cy="140" r="60" fill="#2D9E4A" stroke="#0a0a0a" stroke-width="3"/>
+                <circle cx="135" cy="175" r="68" fill="#34A853" stroke="#0a0a0a" stroke-width="3"/>
+                <circle cx="105" cy="120" r="50" fill="#47C769" stroke="#0a0a0a" stroke-width="2.5"/>
+                <circle cx="165" cy="125" r="50" fill="#34A853" stroke="#0a0a0a" stroke-width="2.5"/>
+                <path d="M90,110 Q108,98 126,110" stroke="#1E8E3E" stroke-width="2" stroke-linecap="round"/>
+                <path d="M145,145 Q162,132 180,145" stroke="#1E8E3E" stroke-width="2" stroke-linecap="round"/>
+              </g>
+            </svg>
+          </div>
+
+          <!-- Right Midground Tree (Subtle Depth in Perspective) -->
+          <div class="hw-forest-tree hw-tree-right-mid">
+            <svg viewBox="0 0 180 320" fill="none">
+              <g class="hw-tree-trunk">
+                <path d="M85,320 L88,180 Q80,145 65,120 Q95,145 95,180 L100,320 Z" fill="#5C381E" stroke="#0a0a0a" stroke-width="2.5"/>
+              </g>
+              <g class="hw-tree-crown hw-crown-right-mid">
+                <circle cx="90" cy="80"  r="55" fill="#1E8E3E" stroke="#0a0a0a" stroke-width="2.5"/>
+                <circle cx="50" cy="115" r="45" fill="#2D9E4A" stroke="#0a0a0a" stroke-width="2.5"/>
+                <circle cx="130" cy="115" r="45" fill="#2D9E4A" stroke="#0a0a0a" stroke-width="2.5"/>
+                <circle cx="90" cy="140" r="50" fill="#34A853" stroke="#0a0a0a" stroke-width="2.5"/>
+              </g>
+            </svg>
+          </div>
+
+          <!-- Right Foreground Tree (Slender Woodland Cedar) -->
+          <div class="hw-forest-tree hw-tree-right-fore">
+            <svg viewBox="0 0 200 360" fill="none">
+              <g class="hw-tree-trunk">
+                <path d="M95,360 L98,190 Q105,150 125,125 Q102,150 102,190 L108,360 Z" fill="#6E4327" stroke="#0a0a0a" stroke-width="3"/>
+                <path d="M98,200 Q80,165 55,150 Q80,170 94,205 Z" fill="#6E4327" stroke="#0a0a0a" stroke-width="2.5"/>
+              </g>
+              <g class="hw-tree-crown hw-crown-right-fore">
+                <circle cx="100" cy="80"  r="58" fill="#1E8E3E" stroke="#0a0a0a" stroke-width="3"/>
+                <circle cx="140" cy="120" r="50" fill="#2D9E4A" stroke="#0a0a0a" stroke-width="3"/>
+                <circle cx="60"  cy="120" r="48" fill="#2D9E4A" stroke="#0a0a0a" stroke-width="3"/>
+                <circle cx="100" cy="150" r="52" fill="#34A853" stroke="#0a0a0a" stroke-width="3"/>
+                <circle cx="120" cy="100" r="42" fill="#47C769" stroke="#0a0a0a" stroke-width="2.5"/>
+              </g>
+            </svg>
+          </div>
+        </div>
+
+        <!-- LAYER 5: Falling & Swirling Forest Leaves -->
         <div class="hw-leaves" aria-hidden="true">
-          <span class="hw-leaf hw-leaf-1"><svg viewBox="0 0 16 20" fill="none"><path d="M8,1 C12,4 14,10 8,19 C2,10 4,4 8,1Z" fill="#34A853" stroke="#1e8e3e" stroke-width="1"/><line x1="8" y1="4" x2="8" y2="18" stroke="#1e8e3e" stroke-width="0.8"/></svg></span>
-          <span class="hw-leaf hw-leaf-2"><svg viewBox="0 0 14 18" fill="none"><path d="M7,1 C11,4 12,9 7,17 C2,9 3,4 7,1Z" fill="#2d9e4a" stroke="#1e8e3e" stroke-width="1"/><line x1="7" y1="3" x2="7" y2="16" stroke="#1e8e3e" stroke-width="0.8"/></svg></span>
-          <span class="hw-leaf hw-leaf-3"><svg viewBox="0 0 16 20" fill="none"><path d="M8,1 C12,4 14,10 8,19 C2,10 4,4 8,1Z" fill="#3db85a" stroke="#1e8e3e" stroke-width="1"/><line x1="8" y1="4" x2="8" y2="18" stroke="#1e8e3e" stroke-width="0.8"/></svg></span>
-          <span class="hw-leaf hw-leaf-4"><svg viewBox="0 0 14 18" fill="none"><path d="M7,1 C11,4 12,9 7,17 C2,9 3,4 7,1Z" fill="#34A853" stroke="#1e8e3e" stroke-width="1"/></svg></span>
-          <span class="hw-leaf hw-leaf-5"><svg viewBox="0 0 16 20" fill="none"><path d="M8,1 C12,4 14,10 8,19 C2,10 4,4 8,1Z" fill="#2d9e4a" stroke="#1e8e3e" stroke-width="1"/></svg></span>
-          <span class="hw-leaf hw-leaf-6"><svg viewBox="0 0 14 18" fill="none"><path d="M7,1 C11,4 12,9 7,17 C2,9 3,4 7,1Z" fill="#3db85a" stroke="#1e8e3e" stroke-width="1"/></svg></span>
-          <span class="hw-leaf hw-leaf-7"><svg viewBox="0 0 16 20" fill="none"><path d="M8,1 C12,4 14,10 8,19 C2,10 4,4 8,1Z" fill="#34A853" stroke="#1e8e3e" stroke-width="1"/></svg></span>
-          <span class="hw-leaf hw-leaf-8"><svg viewBox="0 0 14 18" fill="none"><path d="M7,1 C11,4 12,9 7,17 C2,9 3,4 7,1Z" fill="#2d9e4a" stroke="#1e8e3e" stroke-width="1"/></svg></span>
-          <span class="hw-leaf hw-leaf-9"><svg viewBox="0 0 16 20" fill="none"><path d="M8,1 C12,4 14,10 8,19 C2,10 4,4 8,1Z" fill="#3db85a" stroke="#1e8e3e" stroke-width="1"/></svg></span>
-          <span class="hw-leaf hw-leaf-10"><svg viewBox="0 0 14 18" fill="none"><path d="M7,1 C11,4 12,9 7,17 C2,9 3,4 7,1Z" fill="#34A853" stroke="#1e8e3e" stroke-width="1"/></svg></span>
+          <span class="hw-leaf hw-leaf-1"><svg viewBox="0 0 20 24" fill="none"><path d="M10,2 C16,5 18,12 10,22 C2,12 4,5 10,2Z" fill="#34A853" stroke="#0a0a0a" stroke-width="1.5"/><line x1="10" y1="4" x2="10" y2="20" stroke="#1E4D2B" stroke-width="1"/></svg></span>
+          <span class="hw-leaf hw-leaf-2"><svg viewBox="0 0 18 22" fill="none"><path d="M9,2 C14,5 16,11 9,20 C2,11 4,5 9,2Z" fill="#47C769" stroke="#0a0a0a" stroke-width="1.5"/><line x1="9" y1="4" x2="9" y2="18" stroke="#1E4D2B" stroke-width="1"/></svg></span>
+          <span class="hw-leaf hw-leaf-3"><svg viewBox="0 0 20 24" fill="none"><path d="M10,2 C16,5 18,12 10,22 C2,12 4,5 10,2Z" fill="#2D9E4A" stroke="#0a0a0a" stroke-width="1.5"/><line x1="10" y1="4" x2="10" y2="20" stroke="#1E4D2B" stroke-width="1"/></svg></span>
+          <span class="hw-leaf hw-leaf-4"><svg viewBox="0 0 18 22" fill="none"><path d="M9,2 C14,5 16,11 9,20 C2,11 4,5 9,2Z" fill="#34A853" stroke="#0a0a0a" stroke-width="1.5"/></svg></span>
+          <span class="hw-leaf hw-leaf-5"><svg viewBox="0 0 20 24" fill="none"><path d="M10,2 C16,5 18,12 10,22 C2,12 4,5 10,2Z" fill="#47C769" stroke="#0a0a0a" stroke-width="1.5"/></svg></span>
+          <span class="hw-leaf hw-leaf-6"><svg viewBox="0 0 18 22" fill="none"><path d="M9,2 C14,5 16,11 9,20 C2,11 4,5 9,2Z" fill="#2D9E4A" stroke="#0a0a0a" stroke-width="1.5"/></svg></span>
+          <span class="hw-leaf hw-leaf-7"><svg viewBox="0 0 20 24" fill="none"><path d="M10,2 C16,5 18,12 10,22 C2,12 4,5 10,2Z" fill="#34A853" stroke="#0a0a0a" stroke-width="1.5"/></svg></span>
+          <span class="hw-leaf hw-leaf-8"><svg viewBox="0 0 18 22" fill="none"><path d="M9,2 C14,5 16,11 9,20 C2,11 4,5 9,2Z" fill="#47C769" stroke="#0a0a0a" stroke-width="1.5"/></svg></span>
         </div>
 
-        <!-- LAYER 7: Foreground flowers / grass -->
+        <!-- LAYER 6: Foreground Wildflowers & Grass (Full-Width Bottom Strip) -->
         <div class="hw-flowers" aria-hidden="true">
-          <svg class="hw-flower-strip" viewBox="0 0 1440 80" fill="none" preserveAspectRatio="xMidYMax meet">
-            <!-- Grass blades -->
-            <path d="M20,80 Q18,55 22,40" stroke="#34A853" stroke-width="2" stroke-linecap="round"/>
-            <path d="M28,80 Q32,50 26,32" stroke="#2d9e4a" stroke-width="2" stroke-linecap="round"/>
-            <path d="M36,80 Q34,58 40,42" stroke="#34A853" stroke-width="1.5" stroke-linecap="round"/>
-            <path d="M80,80 Q78,52 82,38" stroke="#34A853" stroke-width="2" stroke-linecap="round"/>
-            <path d="M88,80 Q92,48 86,30" stroke="#2d9e4a" stroke-width="2" stroke-linecap="round"/>
-            <!-- Flower 1 (yellow) -->
-            <circle cx="55" cy="38" r="5" fill="#FBBC05" stroke="#0a0a0a" stroke-width="1"/>
-            <circle cx="55" cy="30" r="3" fill="#FBBC05" stroke="#0a0a0a" stroke-width="1"/>
-            <circle cx="62" cy="34" r="3" fill="#FBBC05" stroke="#0a0a0a" stroke-width="1"/>
-            <circle cx="48" cy="34" r="3" fill="#FBBC05" stroke="#0a0a0a" stroke-width="1"/>
-            <circle cx="55" cy="38" r="3" fill="#e37400"/>
-            <line x1="55" y1="43" x2="55" y2="80" stroke="#34A853" stroke-width="2"/>
-            <!-- Flower 2 (red) -->
-            <circle cx="160" cy="42" r="4" fill="#EA4335" stroke="#0a0a0a" stroke-width="1"/>
-            <circle cx="160" cy="35" r="3" fill="#EA4335" stroke="#0a0a0a" stroke-width="1"/>
-            <circle cx="166" cy="39" r="3" fill="#EA4335" stroke="#0a0a0a" stroke-width="1"/>
-            <circle cx="154" cy="39" r="3" fill="#EA4335" stroke="#0a0a0a" stroke-width="1"/>
-            <circle cx="160" cy="42" r="2.5" fill="#c5221f"/>
-            <line x1="160" y1="46" x2="160" y2="80" stroke="#34A853" stroke-width="2"/>
-            <!-- More grass -->
-            <path d="M200,80 Q198,55 202,40" stroke="#34A853" stroke-width="2" stroke-linecap="round"/>
-            <path d="M208,80 Q212,50 206,32" stroke="#2d9e4a" stroke-width="2" stroke-linecap="round"/>
-            <!-- Flower 3 (blue) -->
-            <circle cx="280" cy="40" r="4" fill="#4285F4" stroke="#0a0a0a" stroke-width="1"/>
-            <circle cx="280" cy="33" r="3" fill="#4285F4" stroke="#0a0a0a" stroke-width="1"/>
-            <circle cx="286" cy="37" r="3" fill="#4285F4" stroke="#0a0a0a" stroke-width="1"/>
-            <circle cx="274" cy="37" r="3" fill="#4285F4" stroke="#0a0a0a" stroke-width="1"/>
-            <circle cx="280" cy="40" r="2.5" fill="#1a6fe8"/>
-            <line x1="280" y1="44" x2="280" y2="80" stroke="#34A853" stroke-width="2"/>
-            <!-- Grass patches across width -->
-            <path d="M350,80 Q348,58 352,44" stroke="#34A853" stroke-width="2" stroke-linecap="round"/>
-            <path d="M358,80 Q362,52 356,36" stroke="#2d9e4a" stroke-width="1.5" stroke-linecap="round"/>
-            <path d="M500,80 Q498,55 502,40" stroke="#34A853" stroke-width="2" stroke-linecap="round"/>
-            <path d="M508,80 Q512,50 506,32" stroke="#2d9e4a" stroke-width="2" stroke-linecap="round"/>
-            <!-- Flower 4 (green) -->
-            <circle cx="580" cy="38" r="5" fill="#34A853" stroke="#0a0a0a" stroke-width="1"/>
-            <circle cx="580" cy="30" r="3" fill="#34A853" stroke="#0a0a0a" stroke-width="1"/>
-            <circle cx="587" cy="34" r="3" fill="#34A853" stroke="#0a0a0a" stroke-width="1"/>
-            <circle cx="573" cy="34" r="3" fill="#34A853" stroke="#0a0a0a" stroke-width="1"/>
-            <circle cx="580" cy="38" r="3" fill="#1e8e3e"/>
-            <line x1="580" y1="43" x2="580" y2="80" stroke="#34A853" stroke-width="2"/>
-            <path d="M650,80 Q648,55 652,40" stroke="#34A853" stroke-width="2" stroke-linecap="round"/>
-            <path d="M658,80 Q662,50 656,32" stroke="#2d9e4a" stroke-width="2" stroke-linecap="round"/>
-            <!-- Flower 5 (yellow) -->
-            <circle cx="750" cy="42" r="4" fill="#FBBC05" stroke="#0a0a0a" stroke-width="1"/>
-            <circle cx="750" cy="35" r="3" fill="#FBBC05" stroke="#0a0a0a" stroke-width="1"/>
-            <circle cx="756" cy="39" r="3" fill="#FBBC05" stroke="#0a0a0a" stroke-width="1"/>
-            <circle cx="744" cy="39" r="3" fill="#FBBC05" stroke="#0a0a0a" stroke-width="1"/>
-            <circle cx="750" cy="42" r="2.5" fill="#e37400"/>
-            <line x1="750" y1="46" x2="750" y2="80" stroke="#34A853" stroke-width="2"/>
-            <path d="M820,80 Q818,55 822,40" stroke="#34A853" stroke-width="2" stroke-linecap="round"/>
-            <path d="M828,80 Q832,50 826,32" stroke="#2d9e4a" stroke-width="2" stroke-linecap="round"/>
-            <!-- Flower 6 (red) -->
-            <circle cx="920" cy="40" r="4" fill="#EA4335" stroke="#0a0a0a" stroke-width="1"/>
-            <circle cx="920" cy="33" r="3" fill="#EA4335" stroke="#0a0a0a" stroke-width="1"/>
-            <circle cx="926" cy="37" r="3" fill="#EA4335" stroke="#0a0a0a" stroke-width="1"/>
-            <circle cx="914" cy="37" r="3" fill="#EA4335" stroke="#0a0a0a" stroke-width="1"/>
-            <circle cx="920" cy="40" r="2.5" fill="#c5221f"/>
-            <line x1="920" y1="44" x2="920" y2="80" stroke="#34A853" stroke-width="2"/>
-            <path d="M1000,80 Q998,55 1002,40" stroke="#34A853" stroke-width="2" stroke-linecap="round"/>
-            <path d="M1008,80 Q1012,50 1006,32" stroke="#2d9e4a" stroke-width="2" stroke-linecap="round"/>
-            <!-- Flower 7 (blue) -->
-            <circle cx="1100" cy="38" r="5" fill="#4285F4" stroke="#0a0a0a" stroke-width="1"/>
-            <circle cx="1100" cy="30" r="3" fill="#4285F4" stroke="#0a0a0a" stroke-width="1"/>
-            <circle cx="1107" cy="34" r="3" fill="#4285F4" stroke="#0a0a0a" stroke-width="1"/>
-            <circle cx="1093" cy="34" r="3" fill="#4285F4" stroke="#0a0a0a" stroke-width="1"/>
-            <circle cx="1100" cy="38" r="3" fill="#1a6fe8"/>
-            <line x1="1100" y1="43" x2="1100" y2="80" stroke="#34A853" stroke-width="2"/>
-            <path d="M1180,80 Q1178,55 1182,40" stroke="#34A853" stroke-width="2" stroke-linecap="round"/>
-            <path d="M1188,80 Q1192,50 1186,32" stroke="#2d9e4a" stroke-width="2" stroke-linecap="round"/>
-            <!-- Flower 8 (green) -->
-            <circle cx="1280" cy="42" r="4" fill="#34A853" stroke="#0a0a0a" stroke-width="1"/>
-            <circle cx="1280" cy="35" r="3" fill="#34A853" stroke="#0a0a0a" stroke-width="1"/>
-            <circle cx="1286" cy="39" r="3" fill="#34A853" stroke="#0a0a0a" stroke-width="1"/>
-            <circle cx="1274" cy="39" r="3" fill="#34A853" stroke="#0a0a0a" stroke-width="1"/>
-            <circle cx="1280" cy="42" r="2.5" fill="#1e8e3e"/>
-            <line x1="1280" y1="46" x2="1280" y2="80" stroke="#34A853" stroke-width="2"/>
-            <path d="M1360,80 Q1358,55 1362,40" stroke="#34A853" stroke-width="2" stroke-linecap="round"/>
-            <path d="M1368,80 Q1372,50 1366,32" stroke="#2d9e4a" stroke-width="2" stroke-linecap="round"/>
-            <path d="M1420,80 Q1418,58 1422,44" stroke="#34A853" stroke-width="2" stroke-linecap="round"/>
+          <svg class="hw-flower-strip" viewBox="0 0 1440 90" fill="none" preserveAspectRatio="none">
+            <!-- Grass Tufts -->
+            <path d="M10,90 Q12,50 18,30 M18,90 Q22,45 28,25 M28,90 Q30,55 35,35" stroke="#1E8E3E" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M90,90 Q92,50 98,30 M98,90 Q102,45 108,25 M108,90 Q110,55 115,35" stroke="#2D9E4A" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M220,90 Q222,50 228,30 M228,90 Q232,45 238,25" stroke="#1E8E3E" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M380,90 Q382,50 388,30 M388,90 Q392,45 398,25" stroke="#2D9E4A" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M520,90 Q522,50 528,30 M528,90 Q532,45 538,25" stroke="#1E8E3E" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M700,90 Q702,50 708,30 M708,90 Q712,45 718,25" stroke="#2D9E4A" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M860,90 Q862,50 868,30 M868,90 Q872,45 878,25" stroke="#1E8E3E" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M1020,90 Q1022,50 1028,30 M1028,90 Q1032,45 1038,25" stroke="#2D9E4A" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M1200,90 Q1202,50 1208,30 M1208,90 Q1212,45 1218,25" stroke="#1E8E3E" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M1360,90 Q1362,50 1368,30 M1368,90 Q1372,45 1378,25" stroke="#2D9E4A" stroke-width="2.5" stroke-linecap="round"/>
+
+            <!-- Cartoon Daisy 1 (White & Yellow) -->
+            <circle cx="58" cy="40" r="12" fill="white" stroke="#0a0a0a" stroke-width="2"/>
+            <circle cx="58" cy="40" r="5" fill="#FBBC04" stroke="#0a0a0a" stroke-width="1.5"/>
+            <line x1="58" y1="52" x2="58" y2="90" stroke="#1E8E3E" stroke-width="2.5"/>
+
+            <!-- Cartoon Flower 2 (Google Red) -->
+            <circle cx="160" cy="45" r="10" fill="#EA4335" stroke="#0a0a0a" stroke-width="2"/>
+            <circle cx="160" cy="45" r="4" fill="#FBBC04" stroke="#0a0a0a" stroke-width="1.5"/>
+            <line x1="160" y1="55" x2="160" y2="90" stroke="#1E8E3E" stroke-width="2.5"/>
+
+            <!-- Cartoon Flower 3 (Google Blue) -->
+            <circle cx="310" cy="42" r="11" fill="#4285F4" stroke="#0a0a0a" stroke-width="2"/>
+            <circle cx="310" cy="42" r="4.5" fill="white" stroke="#0a0a0a" stroke-width="1.5"/>
+            <line x1="310" y1="53" x2="310" y2="90" stroke="#1E8E3E" stroke-width="2.5"/>
+
+            <!-- Cartoon Flower 4 (White Daisy) -->
+            <circle cx="610" cy="38" r="12" fill="white" stroke="#0a0a0a" stroke-width="2"/>
+            <circle cx="610" cy="38" r="5" fill="#FBBC04" stroke="#0a0a0a" stroke-width="1.5"/>
+            <line x1="610" y1="50" x2="610" y2="90" stroke="#1E8E3E" stroke-width="2.5"/>
+
+            <!-- Cartoon Flower 5 (Google Yellow) -->
+            <circle cx="790" cy="44" r="10" fill="#FBBC04" stroke="#0a0a0a" stroke-width="2"/>
+            <circle cx="790" cy="44" r="4" fill="#EA4335" stroke="#0a0a0a" stroke-width="1.5"/>
+            <line x1="790" y1="54" x2="790" y2="90" stroke="#1E8E3E" stroke-width="2.5"/>
+
+            <!-- Cartoon Flower 6 (Google Red) -->
+            <circle cx="950" cy="40" r="11" fill="#EA4335" stroke="#0a0a0a" stroke-width="2"/>
+            <circle cx="950" cy="40" r="4.5" fill="#FBBC04" stroke="#0a0a0a" stroke-width="1.5"/>
+            <line x1="950" y1="51" x2="950" y2="90" stroke="#1E8E3E" stroke-width="2.5"/>
+
+            <!-- Cartoon Flower 7 (Google Blue) -->
+            <circle cx="1120" cy="42" r="10" fill="#4285F4" stroke="#0a0a0a" stroke-width="2"/>
+            <circle cx="1120" cy="42" r="4" fill="white" stroke="#0a0a0a" stroke-width="1.5"/>
+            <line x1="1120" y1="52" x2="1120" y2="90" stroke="#1E8E3E" stroke-width="2.5"/>
+
+            <!-- Cartoon Flower 8 (White Daisy) -->
+            <circle cx="1290" cy="38" r="12" fill="white" stroke="#0a0a0a" stroke-width="2"/>
+            <circle cx="1290" cy="38" r="5" fill="#FBBC04" stroke="#0a0a0a" stroke-width="1.5"/>
+            <line x1="1290" y1="50" x2="1290" y2="90" stroke="#1E8E3E" stroke-width="2.5"/>
           </svg>
         </div>
 
-        <!-- LAYER 5: floating developer objects (independent motion) -->
-        <!-- Terminal window -->
-        <div class="hw-obj hw-obj-1">
-          <svg viewBox="0 0 64 44" fill="none"><rect x="1" y="1" width="62" height="42" stroke="#0a0a0a" stroke-width="2" fill="white"/><rect x="1" y="1" width="62" height="12" fill="#0a0a0a"/><circle cx="9" cy="7" r="2.5" fill="#EA4335"/><circle cx="17" cy="7" r="2.5" fill="#F9AB00"/><circle cx="25" cy="7" r="2.5" fill="#34A853"/><text x="8" y="26" font-family="Space Mono,monospace" font-size="7" fill="#34A853">$ hack --s4</text><text x="8" y="37" font-family="Space Mono,monospace" font-size="6" fill="#888580">▌</text></svg>
-        </div>
-        <!-- Code brackets -->
-        <div class="hw-obj hw-obj-2">
-          <svg viewBox="0 0 56 56" fill="none"><text x="4" y="36" font-family="Space Mono,monospace" font-size="32" font-weight="700" fill="#34A853" opacity="0.9">{}</text></svg>
-        </div>
-        <!-- Node graph -->
-        <div class="hw-obj hw-obj-3">
-          <svg viewBox="0 0 56 56" fill="none"><circle cx="10" cy="28" r="6" fill="none" stroke="#4285F4" stroke-width="2"/><circle cx="46" cy="12" r="6" fill="none" stroke="#34A853" stroke-width="2"/><circle cx="46" cy="44" r="6" fill="none" stroke="#EA4335" stroke-width="2"/><line x1="16" y1="28" x2="40" y2="14" stroke="#0a0a0a" stroke-width="1.5"/><line x1="16" y1="28" x2="40" y2="42" stroke="#0a0a0a" stroke-width="1.5"/><circle cx="10" cy="28" r="2.5" fill="#4285F4"/><circle cx="46" cy="12" r="2.5" fill="#34A853"/><circle cx="46" cy="44" r="2.5" fill="#EA4335"/></svg>
-        </div>
-        <!-- Diamond / gem shape -->
-        <div class="hw-obj hw-obj-4">
-          <svg viewBox="0 0 48 48" fill="none"><rect x="4" y="4" width="40" height="40" stroke="#34A853" stroke-width="2.5" fill="rgba(52,168,83,0.08)" transform="rotate(45 24 24)"/><circle cx="24" cy="24" r="4" fill="#34A853"/></svg>
-        </div>
-        <!-- HTML tag -->
-        <div class="hw-obj hw-obj-5">
-          <svg viewBox="0 0 72 32" fill="none"><text x="4" y="24" font-family="Space Mono,monospace" font-size="18" font-weight="700" fill="#4285F4" opacity="0.85">&lt;/&gt;</text></svg>
-        </div>
-        <!-- Geometric leaf / hexagon -->
-        <div class="hw-obj hw-obj-6">
-          <svg viewBox="0 0 48 56" fill="none"><polygon points="24,2 46,14 46,42 24,54 2,42 2,14" stroke="#34A853" stroke-width="2" fill="rgba(52,168,83,0.1)"/><circle cx="24" cy="28" r="6" stroke="#34A853" stroke-width="1.5" fill="none"/><circle cx="24" cy="28" r="2" fill="#34A853"/></svg>
-        </div>
-        <!-- Build block -->
-        <div class="hw-obj hw-obj-7">
-          <svg viewBox="0 0 44 44" fill="none"><rect x="2" y="2" width="40" height="40" stroke="#F9AB00" stroke-width="2" fill="rgba(249,171,0,0.08)"/><line x1="2" y1="16" x2="42" y2="16" stroke="#F9AB00" stroke-width="1.5"/><line x1="22" y1="16" x2="22" y2="42" stroke="#F9AB00" stroke-width="1"/></svg>
-        </div>
-        <!-- Bracket pair -->
-        <div class="hw-obj hw-obj-8">
-          <svg viewBox="0 0 40 48" fill="none"><polyline points="20,4 8,4 8,44 20,44" stroke="#0a0a0a" stroke-width="2.5" fill="none" stroke-linecap="square"/><polyline points="20,4 32,4 32,44 20,44" stroke="#34A853" stroke-width="2.5" fill="none" stroke-linecap="square"/></svg>
-        </div>
-        <!-- Pulsing nodes -->
-        <div class="hw-nodes">
-          <span class="hw-node hw-node-blue"></span>
-          <span class="hw-node hw-node-red"></span>
-          <span class="hw-node hw-node-yellow"></span>
-          <span class="hw-node hw-node-green"></span>
-          <span class="hw-node hw-node-green hw-node-sm"></span>
-          <span class="hw-node hw-node-blue hw-node-sm"></span>
-        </div>
       </div>
 
-      <!-- Hero content — centered composition -->
+      <!-- Hero Stage — Centered Neo-Brutalist Composition -->
       <div class="hero-stage">
-        <p class="hero-eyebrow">
-          <span class="eyebrow-rule" aria-hidden="true"></span>
-          <span data-hero-org></span>
-        </p>
-        <h1 id="hero-heading">
-          <span class="h1-line h1-line-1">HACK WITH</span>
-          <span class="h1-line h1-line-2"><em class="h1-gdg">GDG</em><em class="h1-s4"> S4</em></span>
-        </h1>
+        <div class="hero-heading-wrap">
+          <h1 id="hero-heading">
+            <span class="h1-line h1-line-1">HACK WITH</span>
+            <span class="h1-line h1-line-2"><span class="h1-g">G</span><span class="h1-d">D</span><span class="h1-g2">G</span> <span class="h1-s4">S4</span></span>
+          </h1>
+
+          <!-- POP-OUT ORBITAL ELEMENTS (Exact elements from Hack With GDG S4 Illustration) -->
+          <div class="popout-orbit-container" aria-hidden="true">
+            <!-- 1. Light Bulb — Ideation (Top-Left) -->
+            <div class="popout-item popout-bulb" title="Ideation & Innovation">
+              <svg viewBox="0 0 54 62" fill="none" class="popout-art">
+                <!-- Rays -->
+                <line x1="27" y1="2" x2="27" y2="8" stroke="#FBBC04" stroke-width="2.5" stroke-linecap="round"/>
+                <line x1="10" y1="9" x2="15" y2="14" stroke="#FBBC04" stroke-width="2.5" stroke-linecap="round"/>
+                <line x1="44" y1="9" x2="39" y2="14" stroke="#FBBC04" stroke-width="2.5" stroke-linecap="round"/>
+                <line x1="3" y1="25" x2="9" y2="25" stroke="#FBBC04" stroke-width="2.5" stroke-linecap="round"/>
+                <line x1="51" y1="25" x2="45" y2="25" stroke="#FBBC04" stroke-width="2.5" stroke-linecap="round"/>
+                <!-- Bulb -->
+                <path d="M17,37 C12,32 11,23 15,16 C19,9 27,8 33,11 C39,15 42,23 39,29 C37,33 33,37 31,41 L23,41 C21,37 18,35 17,37Z" fill="#FFF8E1" stroke="#0a0a0a" stroke-width="2.5"/>
+                <path d="M23,31 L25,22 L29,22 L31,31" stroke="#FBBC04" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <rect x="22" y="42" width="10" height="4" rx="1.5" fill="#4285F4" stroke="#0a0a0a" stroke-width="2"/>
+                <rect x="23" y="47" width="8" height="3" rx="1" fill="#EA4335" stroke="#0a0a0a" stroke-width="1.5"/>
+                <circle cx="27" cy="52" r="2" fill="#0a0a0a"/>
+              </svg>
+            </div>
+
+            <!-- 2. Puzzle Pieces — Problem Solving (Middle-Left) -->
+            <div class="popout-item popout-puzzle" title="Problem Solving & Modular Architecture">
+              <svg viewBox="0 0 62 52" fill="none" class="popout-art">
+                <circle cx="36" cy="7" r="4.5" fill="#EA4335" stroke="#0a0a0a" stroke-width="1.5"/>
+                <circle cx="48" cy="14" r="3" fill="#4285F4" stroke="#0a0a0a" stroke-width="1.5"/>
+                <!-- Red Piece -->
+                <path d="M8,16 L22,16 C22,16 23,10 27,10 C31,10 32,16 32,16 L32,24 C32,24 37,25 37,29 C37,33 32,34 32,34 L32,44 L20,44 C20,44 19,40 15,40 C11,40 10,44 10,44 L8,44 Z" fill="#EA4335" stroke="#0a0a0a" stroke-width="2.5"/>
+                <!-- Blue Piece -->
+                <path d="M32,16 L48,16 L48,26 C48,26 53,27 53,31 C53,35 48,36 48,36 L48,46 L34,46 L34,34 C34,34 37,33 37,29 C37,25 32,24 32,24 Z" fill="#4285F4" stroke="#0a0a0a" stroke-width="2.5"/>
+              </svg>
+            </div>
+
+            <!-- 3. Community Team — Collaboration (Bottom-Left) -->
+            <div class="popout-item popout-team" title="Team Collaboration">
+              <svg viewBox="0 0 66 42" fill="none" class="popout-art">
+                <!-- Left (Green) -->
+                <circle cx="15" cy="14" r="7" fill="#34A853" stroke="#0a0a0a" stroke-width="2"/>
+                <path d="M4,38 C4,29 9,26 15,26 C21,26 26,29 26,38 Z" fill="#34A853" stroke="#0a0a0a" stroke-width="2"/>
+                <!-- Right (Yellow) -->
+                <circle cx="51" cy="14" r="7" fill="#FBBC04" stroke="#0a0a0a" stroke-width="2"/>
+                <path d="M40,38 C40,29 45,26 51,26 C57,26 62,29 62,38 Z" fill="#FBBC04" stroke="#0a0a0a" stroke-width="2"/>
+                <!-- Center (Blue) -->
+                <circle cx="33" cy="11" r="8" fill="#4285F4" stroke="#0a0a0a" stroke-width="2.5"/>
+                <path d="M20,38 C20,27 25,24 33,24 C41,24 46,27 46,38 Z" fill="#4285F4" stroke="#0a0a0a" stroke-width="2.5"/>
+              </svg>
+            </div>
+
+            <!-- 4. Rocket Ship — 36h Velocity & Launch (Top-Right) -->
+            <div class="popout-item popout-rocket" title="Rapid 36-Hour Sprint">
+              <svg viewBox="0 0 58 58" fill="none" class="popout-art">
+                <!-- Flames -->
+                <path d="M15,43 Q8,52 6,56 Q14,52 19,45 Z" fill="#EA4335" stroke="#0a0a0a" stroke-width="1.8"/>
+                <path d="M13,44 Q9,49 8,52 Q12,49 16,45 Z" fill="#FBBC04"/>
+                <!-- Wings -->
+                <path d="M22,34 L11,38 L18,27 Z" fill="#4285F4" stroke="#0a0a0a" stroke-width="2"/>
+                <path d="M34,22 L38,11 L27,18 Z" fill="#4285F4" stroke="#0a0a0a" stroke-width="2"/>
+                <!-- Body -->
+                <path d="M19,39 C16,30 20,18 42,6 C48,28 36,32 27,35 Z" fill="white" stroke="#0a0a0a" stroke-width="2.5"/>
+                <path d="M38,10 C41,7 44,5 44,5 C44,5 42,8 39,11 Z" fill="#EA4335" stroke="#0a0a0a" stroke-width="1.5"/>
+                <!-- Porthole -->
+                <circle cx="30" cy="18" r="4.5" fill="#4285F4" stroke="#0a0a0a" stroke-width="2"/>
+                <circle cx="29" cy="17" r="1.5" fill="white"/>
+              </svg>
+            </div>
+
+            <!-- 5. Target & Dart Arrow — Precision & Impact (Middle-Right) -->
+            <div class="popout-item popout-target" title="Precision & Real-World Impact">
+              <svg viewBox="0 0 58 54" fill="none" class="popout-art">
+                <circle cx="28" cy="28" r="22" fill="white" stroke="#4285F4" stroke-width="4"/>
+                <circle cx="28" cy="28" r="22" stroke="#0a0a0a" stroke-width="2"/>
+                <circle cx="28" cy="28" r="12" fill="white" stroke="#34A853" stroke-width="3"/>
+                <circle cx="28" cy="28" r="5" fill="#34A853"/>
+                <line x1="28" y1="28" x2="52" y2="8" stroke="#0a0a0a" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M52,8 L44,7 L48,15 Z" fill="#EA4335" stroke="#0a0a0a" stroke-width="1.5"/>
+                <path d="M52,8 L53,16 L45,12 Z" fill="#EA4335" stroke="#0a0a0a" stroke-width="1.5"/>
+              </svg>
+            </div>
+
+            <!-- 6. Laptop with </> — Coding & Building (Bottom-Right) -->
+            <div class="popout-item popout-laptop" title="Code & Build">
+              <svg viewBox="0 0 60 48" fill="none" class="popout-art">
+                <rect x="10" y="8" width="40" height="26" rx="2" fill="white" stroke="#0a0a0a" stroke-width="2.5"/>
+                <!-- Brackets -->
+                <path d="M22,17 L17,21 L22,25" stroke="#0a0a0a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <line x1="26" y1="26" x2="30" y2="16" stroke="#0a0a0a" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M34,17 L39,21 L34,25" stroke="#0a0a0a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <!-- Base -->
+                <path d="M4,34 L56,34 C56,34 54,39 50,39 L10,39 C6,39 4,34 4,34 Z" fill="#FBBC04" stroke="#0a0a0a" stroke-width="2.5"/>
+                <rect x="25" y="35" width="10" height="2" rx="0.5" fill="#0a0a0a"/>
+              </svg>
+            </div>
+
+            <!-- 7. Google 4-point Sparkles ✦ -->
+            <div class="popout-item popout-sparkle-1">
+              <svg viewBox="0 0 24 24" fill="none" class="popout-sparkle-svg"><path d="M12,0 C12,6 18,12 24,12 C18,12 12,18 12,24 C12,18 6,12 0,12 C6,12 12,6 12,0Z" fill="#34A853" stroke="#0a0a0a" stroke-width="1.5"/></svg>
+            </div>
+            <div class="popout-item popout-sparkle-2">
+              <svg viewBox="0 0 24 24" fill="none" class="popout-sparkle-svg"><path d="M12,0 C12,6 18,12 24,12 C18,12 12,18 12,24 C12,18 6,12 0,12 C6,12 12,6 12,0Z" fill="#FBBC04" stroke="#0a0a0a" stroke-width="1.5"/></svg>
+            </div>
+          </div>
+        </div>
+
         <p class="hero-lede" data-hero-lede></p>
-        <!-- Stat strip -->
-        <div class="hero-stats" aria-label="Event highlights">
+        <!-- Date highlight pill -->
+        <div class="hero-stats" aria-label="Event date">
           <div class="hero-stat">
-            <span class="stat-val">36</span>
-            <span class="stat-label">HOURS</span>
-          </div>
-          <div class="hero-stat-div" aria-hidden="true"></div>
-          <div class="hero-stat">
-            <span class="stat-val">S4</span>
-            <span class="stat-label">SEASON</span>
-          </div>
-          <div class="hero-stat-div" aria-hidden="true"></div>
-          <div class="hero-stat">
-            <span class="stat-val">OCT</span>
-            <span class="stat-label">8–10, 2026</span>
+            <span class="stat-val">OCT 8–10, 2026</span>
+            <span class="stat-label">OFFLINE HACKATHON · KSRCE</span>
           </div>
         </div>
         <div class="hero-actions">
@@ -383,15 +478,14 @@
         </div>
       </div>
 
-      <!-- meta strip -->
-      <div class="hero-meta">
-        <span data-hero-date></span>
-        <span data-hero-venue></span>
-        <span data-hero-location></span>
-        <span class="hero-meta-theme">OPEN INNOVATION</span>
-      </div>
-
     </section>
+
+    <!-- S3-STYLE MARQUEE TICKER BANNER (HIGH-ENERGY BORDER TRANSITION) -->
+    <div class="marquee-banner" aria-hidden="true">
+      <div class="marquee-track">
+        <span>COLLABORATE</span> • <span>CODE</span> • <span>CREATE</span> • <span>INNOVATE</span> • <span>BUILD</span> • <span>COLLABORATE</span> • <span>CODE</span> • <span>CREATE</span> • <span>INNOVATE</span> • <span>BUILD</span> • <span>COLLABORATE</span> • <span>CODE</span> • <span>CREATE</span> • <span>INNOVATE</span> • <span>BUILD</span>
+      </div>
+    </div>
     <section class="countdown-section section-pad" id="countdown-section" aria-labelledby="countdown-label">
       <div class="countdown-heading reveal">
         <p class="eyebrow"><span class="eyebrow-rule" aria-hidden="true"></span>01 / THE CLOCK IS RUNNING</p>
