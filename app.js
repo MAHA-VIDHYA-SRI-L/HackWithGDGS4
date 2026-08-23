@@ -241,16 +241,10 @@ document.addEventListener('DOMContentLoaded', () => {
     b.addEventListener('click', () => showToast('Directions will be available when the venue map is published.'))
   );
   // --- Hero: populate copy from S4_CONFIG ---
-  const heroOrg      = document.querySelector('[data-hero-org]');
-  const heroLede     = document.querySelector('[data-hero-lede]');
-  const heroDate     = document.querySelector('[data-hero-date]');
-  const heroVenue    = document.querySelector('[data-hero-venue]');
-  const heroLocation = document.querySelector('[data-hero-location]');
-  if (heroOrg)      heroOrg.textContent      = S4_CONFIG.organizer.toUpperCase();
-  if (heroLede)     heroLede.textContent     = '36 Hours of Innovation, Building, and Impact!';
-  if (heroDate)     heroDate.textContent     = 'OCTOBER 8–10, 2026';
-  if (heroVenue)    heroVenue.textContent    = 'KSR COLLEGE OF ENGINEERING';
-  if (heroLocation) heroLocation.textContent = 'NAMAKKAL, TAMIL NADU';
+  const heroOrg  = document.querySelector('[data-hero-org]');
+  const heroLede = document.querySelector('[data-hero-lede]');
+  if (heroOrg)  heroOrg.textContent  = S4_CONFIG.organizer.toUpperCase();
+  if (heroLede) heroLede.textContent = '36 Hours of Innovation, Building, and Impact!';
 
   // --- Hero: pointer parallax on world layer (desktop only) ---
   const heroWorld = document.getElementById('heroWorld');
@@ -264,11 +258,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const vh = window.innerHeight;
         const dx = (e.clientX / vw - 0.5) * 2;
         const dy = (e.clientY / vh - 0.5) * 2;
-        // world floats: very subtle shift
-        const floats = heroWorld.querySelectorAll('.hw-float');
-        floats.forEach((el, i) => {
-          const depth = (i % 3 + 1) * 0.4;
-          el.style.transform = `translate(${dx * depth * 6}px, ${dy * depth * 4}px)`;
+        const elements = heroWorld.querySelectorAll('.hw-obj, .hw-node, .hw-cloud, .hw-tree');
+        elements.forEach((el, i) => {
+          const depth = (i % 4 + 1) * 0.4;
+          el.style.transform = `translate(${dx * depth * 8}px, ${dy * depth * 5}px)`;
         });
         tiltRaf = null;
       });
@@ -390,8 +383,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const inlineEl  = document.querySelector('[data-countdown-state-inline]');
     const summaryEl = document.querySelector('[data-countdown-summary]');
     const units     = ['days','hours','minutes','seconds'];
-    const divisors  = [864e5, 36e5, 6e4, 1e3];
-    const modulos   = [null, 24, 60, 60];
 
     const tStart = +new Date(S4_CONFIG.eventStart);
     const tEnd   = +new Date(S4_CONFIG.eventEnd);
@@ -410,7 +401,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let lastValues = {};
     let lastSummaryMin = -1;
-    let intervalId = null;
+    let isInitialTick = true;
 
     function getState(now) {
       if (now < tStart)  return 'before';
@@ -420,27 +411,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function calcValues(now, state) {
       const target = state === 'before' ? tStart : tEnd;
-      const left   = Math.max(0, target - now);
-      return [
-        Math.floor(left / divisors[0]),
-        Math.floor(left / divisors[1]) % 24,
-        Math.floor(left / divisors[2]) % 60,
-        Math.floor(left / divisors[3]) % 60
-      ];
+      const diff   = Math.max(0, target - now);
+      const days   = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours  = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const mins   = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const secs   = Math.floor((diff % (1000 * 60)) / 1000);
+      return [days, hours, mins, secs];
     }
 
-    function flipDigit(u, next) {
+    function updateDigit(u, next) {
       const s = slots[u];
-      if (!s || s.slot.classList.contains('flipping')) return;
-      s.next.textContent = next;
+      if (!s) return;
+
+      if (isInitialTick) {
+        if (s.cur) s.cur.textContent = next;
+        return;
+      }
+
+      if (s.next) s.next.textContent = next;
+      s.slot.classList.remove('flipping');
+      void s.slot.offsetWidth; // force reflow
       s.slot.classList.add('flipping');
-      // after animation completes, swap cur and remove class
-      s.slot.addEventListener('animationend', function handler(e) {
-        if (e.animationName !== 'cd-flip-in') return;
-        s.cur.textContent = next;
+
+      setTimeout(() => {
+        if (s.cur) s.cur.textContent = next;
         s.slot.classList.remove('flipping');
-        s.slot.removeEventListener('animationend', handler);
-      });
+      }, 200);
     }
 
     function tick() {
@@ -448,28 +444,27 @@ document.addEventListener('DOMContentLoaded', () => {
       const state = getState(now);
       const label = states[state];
 
-      // update state heading + section modifier
       if (stateEl && stateEl.textContent !== label) stateEl.textContent = label;
       if (inlineEl && inlineEl.textContent !== label) inlineEl.textContent = label;
-      if (section)  section.dataset.state = state;
+      if (section && section.dataset.state !== state) section.dataset.state = state;
 
       if (state === 'after') {
-        // clear interval — event is over, no more ticking needed
-        clearInterval(intervalId);
-        units.forEach(u => { if (slots[u]) slots[u].cur.textContent = '00'; });
+        units.forEach(u => { if (slots[u]?.cur) slots[u].cur.textContent = '00'; });
         return;
       }
 
       const vals = calcValues(now, state);
       units.forEach((u, i) => {
         const next = String(vals[i]).padStart(2, '0');
-        if (next !== lastValues[u]) {
-          flipDigit(u, next);
+        if (isInitialTick || next !== lastValues[u]) {
+          updateDigit(u, next);
           lastValues[u] = next;
         }
       });
 
-      // sr summary: update once per minute (not every second)
+      isInitialTick = false;
+
+      // sr summary: update once per minute
       const nowMin = Math.floor(now / 6e4);
       if (nowMin !== lastSummaryMin && summaryEl) {
         const [d, h, m] = vals;
@@ -479,7 +474,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     tick();
-    intervalId = setInterval(tick, 1000);
+    setInterval(tick, 1000);
   })();
   // Reveal: mark document as JS-ready first, then add will-animate + observe
   document.documentElement.classList.add('js-reveal-ready');
