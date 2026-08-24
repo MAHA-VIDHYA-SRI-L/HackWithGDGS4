@@ -2605,6 +2605,55 @@ section h2 em,
   color: var(--muted);
 }
 
+/* Sponsor Tiers & Cards */
+.sponsor-tier {
+  margin-top: 24px;
+}
+.sponsor-tier-label {
+  font: 700 11px var(--mono);
+  letter-spacing: var(--tracking-widest);
+  color: var(--muted);
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+.sponsor-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.sponsor-card {
+  background: var(--surface);
+  border: var(--border-card);
+  box-shadow: var(--shadow-hard);
+  border-radius: 4px;
+  padding: 16px 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80px;
+  transition: transform 0.2s var(--ease-spring), box-shadow 0.2s var(--ease-spring);
+}
+.sponsor-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: var(--shadow-hard-lg);
+}
+.sponsor-card a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+.sponsor-logo {
+  max-height: 40px;
+  width: auto;
+  max-width: 180px;
+  object-fit: contain;
+  display: block;
+}
+
 /* =============================================================
    12 / WHERE WE BUILD (VENUE)
    ============================================================= */

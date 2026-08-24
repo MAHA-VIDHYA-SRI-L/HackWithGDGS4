@@ -128,7 +128,15 @@ export const S4_CONFIG = {
     ]
   },
   organizers: [],
-  sponsors: [],
+  sponsors: [
+    {
+      name: 'Devfolio',
+      tier: 'platform partner',
+      url: 'https://devfolio.co',
+      logo: 'devfolio-logo.svg',
+      alt: 'DEVFOLIO LOGO'
+    }
+  ],
   venue: {
     name: 'K S R Institute for Engineering and Technology',
     city: 'Namakkal',
@@ -992,7 +1000,7 @@ if (typeof document !== 'undefined') {
         (tiers[t] = tiers[t] || []).push(s);
       });
 
-      const TIER_ORDER = ['title', 'gold', 'silver', 'bronze', 'partner'];
+      const TIER_ORDER = ['title', 'gold', 'silver', 'bronze', 'platform partner', 'partner'];
       TIER_ORDER.forEach(tier => {
         if (!tiers[tier]) return;
         const group = document.createElement('div');
@@ -1017,7 +1025,7 @@ if (typeof document !== 'undefined') {
             : `<div aria-label="${s.name}">`;
           const close = s.url ? `</a>` : `</div>`;
           const logoHTML = s.logo
-            ? `<img src="${s.logo}" alt="${s.name} logo" loading="lazy" class="sponsor-logo">`
+            ? `<img src="${s.logo}" alt="${s.alt || s.name + ' logo'}" loading="lazy" class="sponsor-logo">`
             : `<span class="sponsor-name-text">${s.name}</span>`;
           li.innerHTML = inner + logoHTML + close;
           row.append(li);
