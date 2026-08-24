@@ -1,7 +1,7 @@
 export const S4_CONFIG = {
   eventName: 'Hack with GDG S4', organizer: 'GDG On Campus KSRCE', venue: { name: 'KSR College of Engineering', city: 'Namakkal', state: 'Tamil Nadu' }, location: 'Namakkal, Tamil Nadu',
   eventStart: '2026-10-08T18:00:00+05:30', eventEnd: '2026-10-10T06:00:00+05:30', ideationDeadline: 'October, 2026', contactEmail: 'gdgksrce@gmail.com',
-  instagramHandle: '@gdg_ksrce', instagramUrl: null, devfolioUrl: null,
+  instagramHandle: '@gdg_ksrce', instagramUrl: null, devfolioUrl: 'https://hack-with-gdg-s4.devfolio.co/', devfolioSlug: 'hack-with-gdg-s4',
   countdownStates: {
     before: 'THE BUILD BEGINS IN',
     during: 'HACK WITH GDG S4 IS LIVE',
@@ -235,7 +235,11 @@ if (typeof document !== 'undefined') {
 
     // Wire live Devfolio URL when available
     document.querySelectorAll('[data-devfolio-cta]').forEach(a => {
-      if (S4_CONFIG.devfolioUrl) a.href = S4_CONFIG.devfolioUrl;
+      if (S4_CONFIG.devfolioUrl) {
+        a.href = S4_CONFIG.devfolioUrl;
+        a.target = '_blank';
+        a.rel = 'noopener noreferrer';
+      }
     });
 
     // Venue directions placeholder
