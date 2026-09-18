@@ -53,10 +53,11 @@ export const S4_CONFIG = {
     ]
   },
   timeline: [
-    { date: 'SEPTEMBER 28, 2026', datetime: '2026-09-28', title: 'ROUND 1 PPT SUBMISSION DEADLINE', sub: 'Ideation proposals and PPT submissions close.', color: 'blue' },
-    { date: 'OCTOBER 8, 2026 — 6:00 PM', datetime: '2026-10-08T18:00', title: '36-HOUR HACKATHON STARTS', sub: 'Starts at 6:00 PM on Oct 8. 36-hour sprint begins at KSRCE.', color: 'red' },
-    { date: 'OCTOBER 9, 2026', datetime: '2026-10-09', title: 'BUILD • MENTOR • SPRINT', sub: 'Overnight hacking sprint with mentors and side events.', color: 'yellow' },
-    { date: 'OCTOBER 10, 2026 — 6:00 AM', datetime: '2026-10-10T06:00', title: 'HACKATHON ENDS • FINAL JUDGING', sub: 'Ends at 6:00 AM on Oct 10 (36 continuous hours). Project presentations & awards.', color: 'green' }
+    { date: '01 — SEPTEMBER 28, 2026', datetime: '2026-09-28', title: 'ROUND 1 PPT SUBMISSION DEADLINE', sub: 'Ideation proposals and PPT submissions close for the selection round.', color: 'blue' },
+    { date: '02 — OCTOBER 8, 2026 — 6:00 PM', datetime: '2026-10-08T18:00', title: '36-HOUR HACKATHON STARTS', sub: '3:00 PM — Registration & Check-in • 5:30 PM — Team Setup & Seating • 6:00 PM — Hackathon Kickoff • 6:30 PM — Rules, Guidelines & Problem Brief • 7:30 PM — Dinner & Refreshments • 8:30 PM — Development Sprint Begins • 10:30 PM — Mentor Connect.', color: 'red' },
+    { date: '03 — OCTOBER 9, 2026', datetime: '2026-10-09', title: 'BUILD • MENTOR • SPRINT', sub: '12:00 AM — Midnight Build Sprint • 3:00 AM — Mentor Check-in • 7:30 AM — Breakfast & Refreshments • 10:00 AM — Progress Checkpoint • 1:00 PM — Lunch • 3:00 PM — Technical Mentoring Session • 6:00 PM — Project Progress Review • 8:00 PM — Dinner & Refreshments • 10:00 PM — Final Development Sprint.', color: 'yellow' },
+    { date: '04 — OCTOBER 10, 2026 — 6:00 AM', datetime: '2026-10-10T06:00', title: 'HACKATHON ENDS', sub: '12:00 AM — Final Build Sprint • 2:00 AM — Final Submission Preparation • 4:00 AM — Final Submission • 5:00 AM — Presentation Setup • 6:00 AM — Hackathon Ends • 6:15 AM — Final Judging.', color: 'green' },
+    { date: '05 — OCTOBER 10, 2026 — 7:00 AM', datetime: '2026-10-10T07:00', title: 'RESULTS & AWARDS', sub: '7:00 AM — Winner Announcement & Closing Ceremony.', color: 'blue' }
   ],
   experience: [
     {
@@ -82,6 +83,12 @@ export const S4_CONFIG = {
       title: '36-HOUR BUILD',
       body: 'Stay focused, ship fast, and turn your idea into a working prototype with your team in one continuous sprint.',
       graphic: 'build'
+    },
+    {
+      index: '05', color: 'yellow',
+      title: 'FOOD & REFRESHMENTS',
+      body: 'Meals, snacks, beverages, and refreshments will be provided throughout the 36-hour hackathon to keep participants energized.',
+      graphic: 'events'
     }
   ],
   rewards: {
@@ -135,6 +142,13 @@ export const S4_CONFIG = {
       url: 'https://devfolio.co',
       logo: 'devfolio-logo.svg',
       alt: 'DEVFOLIO LOGO'
+    },
+    {
+      name: 'Eventopia.in',
+      tier: 'sponsor / event partner',
+      url: 'https://eventopia.in/',
+      logo: null,
+      alt: 'EVENTOPIA.IN'
     }
   ],
   venue: {
@@ -142,8 +156,8 @@ export const S4_CONFIG = {
     city: 'Namakkal',
     region: 'Tamil Nadu',
     country: 'India',
-    dates: 'OCTOBER 8—10, 2026',
-    format: 'OFFLINE HACKATHON',
+    dates: 'OCTOBER 8–10, 2026',
+    format: '6:00 PM – 6:00 AM • 36-HOUR OFFLINE HACKATHON',
     mapEmbedUrl: 'https://maps.google.com/maps?q=11.3585233,77.8317135&hl=en&z=16&output=embed',
     directionsUrl: 'https://www.google.com/maps/place/K+S+R+INSTITUTE+FOR+ENGINEERING+AND+TECHNOLOGY/@11.3585233,77.8317135,17z/data=!3m1!4b1!4m6!3m5!1s0x3ba964017038dfe3:0xd5a68d71e9c1aec7!8m2!3d11.3585233!4d77.8317135!16s%2Fg%2F1hd_fl8cj'
   },
@@ -1004,7 +1018,7 @@ if (typeof document !== 'undefined') {
         (tiers[t] = tiers[t] || []).push(s);
       });
 
-      const TIER_ORDER = ['title', 'gold', 'silver', 'bronze', 'platform partner', 'partner'];
+      const TIER_ORDER = ['title', 'gold', 'silver', 'bronze', 'platform partner', 'sponsor / event partner', 'partner'];
       TIER_ORDER.forEach(tier => {
         if (!tiers[tier]) return;
         const group = document.createElement('div');
